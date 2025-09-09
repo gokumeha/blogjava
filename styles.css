@@ -1,0 +1,148 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #f4f6f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+form {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #3498db;
+}
+
+form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #2980b9;
+}
+
+/* Users List */
+#usersList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#usersList li {
+  background: #e1ecf4;
+  color: #2c3e50;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.post {
+  position: relative;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.post h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.delete-btn{
+  position: absolute;
+  top: 15px;
+  right:15px;
+  background:#e74c3c;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  font: size 0.8rem;
+  border-radius:5px;
+  cursor:pointer;
+  transition:opacity 0.2s, background 0.2s;
+  opacity: 0;
+}
+
+.delete-btn:hover{
+  background: #c14032;
+}
+
+.post:hover .delete-btn{
+  opacity: 1;
+}
+/* Expandable Section */
+.expandable {
+  display: none;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.expandable small {
+  display: block;
+  margin-top: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Expand animation */
+.expandable.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
