@@ -1,1 +1,1 @@
-This is a minimal blog application built with HTML, CSS, and JavaScript that allows multiple users to create and manage posts. Users can be added dynamically, selected as the active poster, and removed when no longer needed. Each post is linked to the user who created it, and deleting a user also removes all their posts for consistency
+
